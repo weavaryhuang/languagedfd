@@ -34,9 +34,4 @@ const server = http.createServer((request, response) => {
 
     }
 
-});
-
-
-server.listen(8000, () =>{
-    console.log("Working...");
-});
+}).listen(8000, ()=> {console.log("Working...");});
