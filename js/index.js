@@ -21,14 +21,19 @@ const server = http.createServer((request, response) => {
     const url = request.url;
 
     if(method === "GET"){
-        if(url === "/"){
+        const requestUrl = new URL(url, 'http://localhost:8000');
+        console.log(requestUrl);
+        if(url === "/" || url === "/home.html" ){
+            sendResponse("home.html", 200, response);
+        }
+        else if(url === "/japanln.html"){
             sendResponse("japanln.html", 200, response);
         }
-        else if(url === "/kr"){
-            sendResponse("./koreanln.html", 200, response);
+        else if(url === "/koreanln.html"){
+            sendResponse("koreanln.html", 200, response);
         }
         else{
-            sendResponse("./notPage.html", 400, response);
+            sendResponse("notPage.html", 400, response);
         }
     } else{
 
