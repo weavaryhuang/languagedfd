@@ -46,7 +46,6 @@ http.createServer((request, response) => {
             sendResponse("koreanln.html", 200, response);
         }
         else if(path === "/json/languageDb.json"){
-            fileType = "css";
             sendResponse("/json/languageDb.json", 200, response);
         }
         else if(path === "/css/style.css"){
@@ -54,7 +53,6 @@ http.createServer((request, response) => {
             sendResponse("/css/style.css", 200, response);
         }
         else if(path === "/js/script.js"){
-            fileType = "css";
             sendResponse("js/script.js", 200, response);
         }
         else{
