@@ -1,3 +1,32 @@
+var alph = [];
+alph = 'a';
+alph = 'b';
+alph = 'c';
+alph = 'd';
+alph = 'e';
+alph = 'f';
+alph = 'g';
+alph = 'h';
+alph = 'i';
+alph = 'j';
+alph = 'k';
+alph = 'l';
+alph = 'm';
+alph = 'n';
+alph = 'o';
+alph = 'p';
+alph = 'q';
+alph = 'r';
+alph = 's';
+alph = 't';
+alph = 'u';
+alph = 'v';
+alph = 'w';
+alph = 'x';
+alph = 'y';
+alph = 'z';
+
+//////////////////////
 var checkFlag = 0 ;
 var checkFlag = 0 ;
 var score = 0;
@@ -155,4 +184,15 @@ function changelanMode2(){
 
 function timeUp() {
     document.getElementById("demo").innerHTML = "Score: " + score;
+}
+
+function startKeyevent(){
+    input.addEventListener("keypress", function(event){
+        if(event.key === 'a'){
+            document.getElementById('demo') = 'a';
+        }
+        else{
+            document.getElementById('demo') = '0';
+        }
+    });
 }
