@@ -45,6 +45,10 @@ http.createServer((request, response) => {
             fileType = "html";
             sendResponse("koreanln.html", 200, response);
         }
+        else if(path === "/alphspeed.html"){
+            fileType = "html";
+            sendResponse("alphspeed.html", 200, response);
+        }
         else if(path === "/json/languageDb.json"){
             sendResponse("/json/languageDb.json", 200, response);
         }
@@ -54,6 +58,9 @@ http.createServer((request, response) => {
         }
         else if(path === "/js/script.js"){
             sendResponse("js/script.js", 200, response);
+        }
+        else if(path === "/js/script2.js"){
+            sendResponse("js/script2.js", 200, response);
         }
         else{
             fileType = "html";
