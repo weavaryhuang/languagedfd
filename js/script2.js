@@ -63,6 +63,7 @@ function startKeyevent(){
                 timeSet1 = 0;
                 timeSet2 = 0;
                 i =0;
+                backArr = alph.slice();
             }
         }
         else if(keyAlph === '?'){
