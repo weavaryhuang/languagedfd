@@ -26,49 +26,63 @@ alph[23] = 'x';
 alph[24] = 'y';
 alph[25] = 'z';
 
+
 //////////////////////
 var flag_alph = 0;
-var i = 0;
-var timeSet1 = 0;
-var timeSet2 = 0;
-var totalseconds = 0;
-
-function start(){
-    document.getElementById('demo').innerHTML = "GO";
-    startKeyevent();
-}
 
 function startKeyevent(){
-    let timeSec = new Date().getTime();
+    let backArr = alph.slice();
+    let showArr = [];
+    let i = 0;
+    let timeSet1 = getTsec();
+    let timeSet2 = 0;
+    showArr = backArr.join(' ');
+    document.getElementById('demo').style.color = 'black';
+    document.getElementById('demo').innerHTML = 'Start from a';
+    document.getElementById('demo2').innerHTML = showArr;
+    document.getElementById('demo3').innerHTML = " ";
     document.addEventListener("keypress", function(event) {
         var keyAlph = event.key;
+        //timeSet1 = getTsec();
         if(keyAlph === alph[i]){
-            timeSet1 = timeSec;
+            backArr.shift();
+            showArr = backArr.join(' ');
             document.getElementById('demo').style.color = 'black';
-            document.getElementById('demo').innerHTML = alph[i];
-            document.getElementById('demo2').innerHTML = keyAlph;
-            
-            if(i === 25){
-                timeSec = new Date().getTime();
+            document.getElementById('demo').innerHTML = "Next is " + alph[i+1];
+            document.getElementById('demo2').innerHTML = showArr;
+            document.getElementById('demo3').innerHTML = keyAlph;
+            i++;
+            if(i === 1){
+                timeSet1 = getTsec();
+            }
+            else if(i === 26){
+                timeSet2 = getTsec();
                 document.getElementById('demo').style.color = 'green';
                 document.getElementById('demo').innerHTML = "Success";
-                timeSet2 = timeSec;
-                document.getElementById('demo2').innerHTML = `Spending Time: ${(timeSet2-timeSet1)/1000}s`;
-                i = -1;
+                document.getElementById('demo3').innerHTML = `Spending Time: ${(timeSet2 - timeSet1)/1000}s`;
                 timeSet1 = 0;
                 timeSet2 = 0;
+                i =0;
             }
-            i++;
         }
         else if(keyAlph === '?'){
             document.getElementById('demo').style.color = 'black';
             document.getElementById('demo').innerHTML = "Restart and Go";
+            timeSet1 = 0;
+            timeSet2 = 0;
+            i=0;
+            startKeyevent();
         } 
         else{
             event.preventDefault();
-            document.getElementById('demo').innerHTML = "NG " + alph[i];
+            document.getElementById('demo').innerHTML = "Wrong, this is " + alph[i];
             document.getElementById('demo').style.color = 'red';
-            document.getElementById('demo2').innerHTML = keyAlph;
+            document.getElementById('demo3').innerHTML = keyAlph;
         }
     })
+}
+
+function getTsec(){
+    let timeSec = new Date().getTime();
+    return timeSec;
 }
