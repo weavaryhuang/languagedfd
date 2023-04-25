@@ -11,11 +11,10 @@
 </head>
 <body>
   
-    <div class="topnav">
-      <a href="../Main.html">Main</a>
-      <a href="../Data.html">Data</a>
-      <a href="#" style="float:right">Link</a>
-    </div>
+    <ul class="topnav">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../login.html" class="active">Login</a></li>
+    </ul>
 
     <div class="header">
       <h1>Dark from Damn</h1>
