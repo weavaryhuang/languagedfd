@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+</head>
+<body>
+  
+    <div class="topnav">
+      <a href="../Main.html">Home</a>
+      <a href="../Info.html">Info</a>
+      <a href="../Data.html">Data</a>
+      <a href="#" style="float:right">Link</a>
+    </div>
+
+    <div class="header">
+      <h1>User</h1>
+      <p>Be not afraid of greatness. Some are born great, 
+        some achieve greatness, and others have greatness thrust upon them.</p>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>Login</h2>
+            <h5>Title description, Jan 28, 2023 </h5>
+
+            <form class="fakeimg" method="post" action="insertSql.php">
+              <label style="background-color: #ddd;">Insert values int SQL</label><br>
+              <label for="uname">User name:</label><br>
+              <input type="text" autocomplete = "off" id="uname" name="uname" required><br>
+              <label for="status">Status:</label><br>
+              <input type="text" autocomplete = "off" id="status" name="status" ><br>
+  
+              <label for="time">Time:</label><br>
+              <input id="datetime" name="time" readonly>
+                <script>
+                  var date = new Date();
+                  var current_date = (date.getFullYear()%2000)+"/"+(date.getMonth()+1)+"/"+ date.getDate()
+                            +" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+                  document.getElementById("datetime").value = current_date;
+                </script>
+  
+              <br><br>
+  
+              <label for="content">Content:</label><br>
+              <input type="text" autocomplete = "off" id="content" name="content" value="tesing"><br><br>
+              <input type="submit" value="Submit">
+            </form>
+            <br>
+  
+  
+            <form method="post" action="main.php">
+              <select name="subject[]">
+                <option value="Open">Open</option>
+                <option value="Update">Update</option>
+                <option value="Insert">Insert</option>
+                <option value="Delete">Delete</option>
+              </select><br><br>
+              <input type="submit" name="submit" value="Search">
+            </form>
+
+            <p></p>
+            <p>A sad thing in life is when you meet someone 
+              who means a lot to you, only to find out in the end 
+              that it was never meant to be and you just have to let go.</p>
+
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <h2>Direction</h2>
+            <p>We know what we are, but not what we may be.</p>
+          </div>
+        </div>
+    
+    </body>
+</html>
+
+
+
