@@ -96,14 +96,16 @@ function getTsec(){
 function inserturl(){
     //let inWords = document.getElementById("suburl").value;
     //let inWords2 = inWords.replace('', '');
-    karaok[ik] = document.getElementById("suburl").value.replace('https://www.youtube.com/watch?v=','');
+    //karaok[ik] = document.getElementById("suburl").value.replace('https://www.youtube.com/watch?v=','');
+    karaok[ik] = document.getElementById("suburl").value.slice(32,43);
     //linkko[ik] = karaok[ik].link(karaok[ik]);
     //document.getElementById('koDemo').innerHTML = linkko.join("</br>");
-    if (ik === 0){
-        document.getElementById('koDemo').innerHTML = '<iframe width="400" height="156" src="https://www.youtube.com/embed/' + document.getElementById("suburl").value.replace('https://www.youtube.com/watch?v=','') +  '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-        karaok[0] = '<iframe width="400" height="156" src="https://www.youtube.com/embed/' + document.getElementById("suburl").value.replace('https://www.youtube.com/watch?v=','');
+    if (ik >= 0){
+        linkko[ik] = '<iframe width="400" height="200" src="https://www.youtube.com/embed/' + karaok[ik] +  '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        document.getElementById('koDemo').innerHTML = linkko.join("</br>");
     }else{
-        document.getElementById('koDemo').innerHTML = karaok.join('" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="400" height="156" src="https://www.youtube.com/embed/') + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        linkko = [];
+        document.getElementById('koDemo').innerHTML = linkko.join("</br>");
     }
     console.log(karaok);
     ik ++;
@@ -113,13 +115,29 @@ function deleteurl(){
     let numk = document.getElementById("suburl").value;
     if (ik >= 0){
         karaok.shift();
-        karaok[0] = '<iframe width="400" height="156" src="https://www.youtube.com/embed/' + karaok[0];
+        linkko.shift();
+        document.getElementById('koDemo').innerHTML = linkko.join("</br>");
         ik --;
-        document.getElementById('koDemo').innerHTML = karaok.join('" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="400" height="156" src="https://www.youtube.com/embed/') + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        if(ik < 0)
+        ik = 0;
     }else{
         ik = 0
         karaok = [];
+        linkko = [];
         document.getElementById('koDemo').innerHTML = " ";  
     }
 }
 
+// function inserturl(){
+//     karaok[ik] = document.getElementById("suburl").value.replace('https://www.youtube.com/watch?v=','');
+//     //linkko[ik] = karaok[ik].link(karaok[ik]);
+//     //document.getElementById('koDemo').innerHTML = linkko.join("</br>");
+//     if (ik === 0){
+//         document.getElementById('koDemo').innerHTML = '<iframe width="400" height="156" src="https://www.youtube.com/embed/' + document.getElementById("suburl").value.replace('https://www.youtube.com/watch?v=','') +  '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+//         karaok[0] = '<iframe width="400" height="156" src="https://www.youtube.com/embed/' + document.getElementById("suburl").value.replace('https://www.youtube.com/watch?v=','');
+//     }else{
+//         document.getElementById('koDemo').innerHTML = karaok.join('" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="400" height="156" src="https://www.youtube.com/embed/') + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+//     }
+//     console.log(karaok);
+//     ik ++;
+// }
