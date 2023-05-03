@@ -9,6 +9,12 @@ if(isset($_POST["submit"]))
 			foreach ($_POST['subject'] as $subject) 
 				// print "You selected $subject<br/>"; 
                 
+            if($subject=="Status")
+                include "statusSql.php";
+            if($subject=="Message")
+                include "messageSql.php";
+            if($subject=="Change")
+                include "Change.php";
             if($subject=="Open")
                 include "openSql.php";
             if($subject=="Update")

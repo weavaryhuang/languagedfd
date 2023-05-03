@@ -16,10 +16,14 @@ function validateForm() {
 		if (chkPermission == 1) {
 			document.getElementById("postForm").style.display = "block";
 		}
-		else if (chkPermission != 1) {
-			document.getElementById("postForm").style.display = "none";
+		else if (chk == 1) {
+			document.getElementById("postFormU").style.display = "block";
 		//   alert("Not match");
-		  return false;
+		//  return false;
+		}
+		else {
+			document.getElementById("postForm").style.display = "none";
+			document.getElementById("postFormU").style.display = "none";
 		}
 	}
 

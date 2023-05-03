@@ -32,10 +32,22 @@
       <script>colorChange(); </script>
     <div>
 
+<form id="postFormU" style="display: none;" method="post" action="main.php">
+    <select name="subject[]">
+        <option value="Status">Status</option>
+        <option value="Message">Message</option>
+        <option value="Change">Change</option>
+        <option value="Open">Open</option>
+    </select><br><br>
+    <input type="submit" name="submit" value="Search">
+</form>
     
 <!-- <form id="postForm" style="display: none;" method="post" onsubmit="return validateForm()" action="main.php"> -->
 <form id="postForm" style="display: none;" method="post" action="main.php">
     <select name="subject[]">
+        <option value="Status">Status</option>
+        <option value="Message">Message</option>
+        <option value="Change">Change</option>
         <option value="Open">Open</option>
         <option value="Update">Update</option>
         <option value="Insert">Insert</option>
@@ -43,6 +55,7 @@
     </select><br><br>
     <input type="submit" name="submit" value="Search">
 </form>
+
 <script>validateForm();</script>
 
 </body>

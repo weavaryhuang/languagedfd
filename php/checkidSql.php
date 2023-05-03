@@ -6,7 +6,7 @@ $status = $_POST["status"];
 
 try
 {
-    $sql  = "Select * from mydb.demotb where UserBasicInfo=? AND UserStatus=? ;";
+    $sql  = "Select * from demotb where UserBasicInfo=? AND UserStatus=? ;";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$uname, $status]);
     $user = $stmt->fetchAll();
