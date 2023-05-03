@@ -3,10 +3,11 @@ include "connectionSQL.php";
 
 $uname = $_POST["uname"];
 $status = $_POST["status"];
+$uid =  6;
 
 try
 {
-    $sql  = "Select * from demotb where UserBasicInfo=? AND UserStatus=? ;";
+    $sql  = "Select * from demotb where UserBasicInfo=? and UserStatus=?;";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$uname, $status]);
     $user = $stmt->fetchAll();
@@ -26,5 +27,5 @@ else
 $checkid = 0;
 $conn = null;
 
-echo json_encode($privilid);
+echo json_encode($privilid.",".$uname);
 ?>
