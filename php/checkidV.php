@@ -26,8 +26,8 @@
 
           <h2 id="demo1" style="font-weight:bold;"></h2>
 		  <p id="demo2"></p>
-      <script>var chk_p = <?php include "checkidSql.php";?>.slice(0,1); var chk = chk_p; console.log(chk);</script>
-      <script>var chkPermission = chk && <?php if($uname=="HEN"){echo 1; }else{echo 0;}?>;</script>
+      <script>var chk = <?php include "checkidSql.php";?>.slice(0,1); var chk_p = <?php include "checkidSql.php";?>.substring(1);</script>
+      <script>var chkPermission = chk && (chk_p=="HEN")? 1: 0;</script>
       <script src = "../js/myFunction.js"></script>
       <script>colorChange(); </script>
     <div>

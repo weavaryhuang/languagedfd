@@ -24,8 +24,8 @@ class TableRows extends RecursiveIteratorIterator {
 
 try
 {
-    $ttttt = "demotb";
-    $sql  = "select * from $ttttt;";
+    $usertb = "demotb";
+    $sql  = "select * from mydb.$usertb;";
     // $stmt = $conn->query($sql);
     
 
