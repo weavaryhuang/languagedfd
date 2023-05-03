@@ -4,6 +4,7 @@ $servername = "localhost";
 $username = "root";
 $password = "AsdfgHjkl098";
 $dbname = "mydb";
+$tbname = "demotb";
 
 
 try {

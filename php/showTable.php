@@ -24,7 +24,8 @@ class TableRows extends RecursiveIteratorIterator {
 
 try
 {
-    $usertb = "demotb";
+    include "datarepo.php";
+    $usertb = $tbname;
     $sql  = "select * from mydb.$usertb;";
     // $stmt = $conn->query($sql);
     
@@ -41,7 +42,7 @@ try
 
 catch (PDOException $e)
 {
-    echo "ERROR: Could not able to execute";
+    echo $sql;
 }
 
 $conn = null;
