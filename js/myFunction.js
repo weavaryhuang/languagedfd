@@ -13,8 +13,12 @@ function colorChange() {
 	}
 
 function validateForm() {
-		if (chk != 1) {
-		  alert("Not match");
+		if (chkPermission == 1) {
+			document.getElementById("postForm").style.display = "block";
+		}
+		else if (chkPermission != 1) {
+			document.getElementById("postForm").style.display = "none";
+		//   alert("Not match");
 		  return false;
 		}
 	}

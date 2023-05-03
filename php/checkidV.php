@@ -27,14 +27,14 @@
           <h2 id="demo1" style="font-weight:bold;"></h2>
 		  <p id="demo2"></p>
       <script>var chk = <?php include "checkidSql.php"; ?>; console.log(chk);</script>
-      <script>var chkPermission = chk && <?php if($uname=="HEN"){echo 1; }else{echo 2;}?>; console.log(chkPermission);</script>
+      <script>var chkPermission = chk && <?php if($uname=="HEN"){echo 1; }else{echo 0;}?>; console.log(chkPermission);</script>
       <script src = "../js/myFunction.js"></script>
-      <script>colorChange();</script>
+      <script>colorChange(); </script>
     <div>
 
     
-
-<form method="post" onsubmit="return validateForm()" action="main.php">
+<!-- <form id="postForm" style="display: none;" method="post" onsubmit="return validateForm()" action="main.php"> -->
+<form id="postForm" style="display: none;" method="post" action="main.php">
     <select name="subject[]">
         <option value="Open">Open</option>
         <option value="Update">Update</option>
@@ -43,6 +43,7 @@
     </select><br><br>
     <input type="submit" name="submit" value="Search">
 </form>
+<script>validateForm();</script>
 
 </body>
 </html>
