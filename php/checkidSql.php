@@ -27,5 +27,5 @@ else
 $checkid = 0;
 $conn = null;
 
-echo json_encode($privilid.",".$uname);
+echo json_encode($privilid.$uname);
 ?>
