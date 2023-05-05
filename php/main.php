@@ -1,4 +1,17 @@
 <?php
+$permissionUser = $_POST["perm"];
+
+// if ($permissionUser == "HEN"){
+//     $ttttt = $permissionUser;
+//     $ttttt = "demotb";
+// }
+// else{
+//     $ttttt = $permissionUser;
+//     $ttttt = "hen";
+// }
+
+// print($ttttt);
+
 if(isset($_POST["submit"])) 
 	{ 
 		// Checking if any option is selected 
@@ -7,7 +20,7 @@ if(isset($_POST["submit"]))
 
 			// Retrieve each selected option 
 			foreach ($_POST['subject'] as $subject) 
-				// print "You selected $subject<br/>"; 
+			// print "You selected $subject<br/>"; 
                 
             if($subject=="Status")
                 include "statusSql.php";

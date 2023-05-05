@@ -1,13 +1,12 @@
 <?php
  
-include_once "connectionSQL.php";
+include "connectionSQL.php";
 
 
 try
 {
-    include "connectionSQL.php";
     // $usertb = $tbname;
-    $sql  = "select * from mydb.demotb;";
+    $sql  = "select * from mydb.$ttUser;";
     // $stmt = $conn->query($sql);
     
 
@@ -24,7 +23,7 @@ catch (PDOException $e)
 }
 //print_r($result);
 
-$permissionUser = $result[10]['UserBasicInfo'];
+//$permissionUser = $result[0]['UserBasicInfo'];
 
 //echo $permissionId;
 

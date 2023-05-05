@@ -22,10 +22,8 @@
     </div>
 <?php
 
-include_once "connectionSQL.php";
-
-include "showTable.php";
-
+// include "userPerm.php";
+include_once "showTable.php";
 
 ?>
 

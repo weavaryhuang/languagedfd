@@ -24,9 +24,9 @@ class TableRows extends RecursiveIteratorIterator {
 
 try
 {
-    include "userPerm.php";
+    include "connectionSQL.php";
     // $usertb = $tbname;
-    $sql  = "select * from mydb.$permissionId;";
+    $sql  = "select * from mydb.$permissionUser;";
     // $stmt = $conn->query($sql);
     
 
