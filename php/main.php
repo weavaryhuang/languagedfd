@@ -10,11 +10,11 @@ $permissionUser = $_POST["perm"];
 //     $ttttt = "hen";
 // }
 
-// print($ttttt);
+// print($permissionUser);
 
 if(isset($_POST["submit"])) 
 	{ 
-		// Checking if any option is selected 
+		// Checking if any option is selected s
 		if(isset($_POST["subject"])) 
 		{ 
 

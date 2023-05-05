@@ -37,7 +37,7 @@
         <option value="Message">Message</option>
         <option value="Change">Change</option>
         <option value="Open">Open</option>
-        <input type="hidden" autocomplete = "off" value="hen" id="perm" name="perm"><script>document.getElementById("perm").value = chk_p;</script><br>
+        <input type="hidden" autocomplete = "off" id="perm" name="perm"><script>document.getElementById("perm").value = chk_p;</script><br>
         <!-- <option id="permUser" hidden></option> -->
     </select><br><br>
     <input type="submit" name="submit" value="Search">
