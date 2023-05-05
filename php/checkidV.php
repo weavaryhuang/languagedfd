@@ -17,7 +17,6 @@
     <div class="header">
       <h1>Dark from Damn</h1>
       <p>To be, or not to be: that is the question.</p>
-	  <p><?php include "connectionChk.php"; ?></p>
     </div>
 
     <div class="card">

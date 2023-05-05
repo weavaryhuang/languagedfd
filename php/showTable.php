@@ -24,16 +24,16 @@ class TableRows extends RecursiveIteratorIterator {
 
 try
 {
-    include "datarepo.php";
-    $usertb = $tbname;
-    $sql  = "select * from mydb.$usertb;";
+    include "userPerm.php";
+    // $usertb = $tbname;
+    $sql  = "select * from mydb.$permissionId;";
     // $stmt = $conn->query($sql);
     
 
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    // $result = $stmt->fetchAll();
+    //$result = $stmt->fetchAll();
 
     foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k => $v) {
             echo $v;
