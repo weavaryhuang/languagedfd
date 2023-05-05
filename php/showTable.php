@@ -26,7 +26,12 @@ try
 {
     include "connectionSQL.php";
     // $usertb = $tbname;
-    $sql  = "select * from mydb.$permissionUser;";
+    if($permissionUser == "root")
+        $sql = "select * from mydb.demotb;";
+    else
+        $sql  = "select * from mydb.$permissionUser;";
+    // $sql  = "select * from mydb.$permissionUser;";
+    // $sql  = "select * from mydb.demotb;";
     // $stmt = $conn->query($sql);
     
 
