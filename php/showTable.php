@@ -29,7 +29,7 @@ try
     if($permissionUser == "HEN")
         $sql = "select*from mydb.demotb;";
     else 
-        $sql  = "select * from mydb.$permissionUser;";
+        $sql  = "select * from mydb.test;";
     // echo $sql;
     
 
