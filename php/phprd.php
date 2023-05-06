@@ -1,7 +1,7 @@
 <?php
 $fname_r = "text";
-$count_log_r = 2;
-$path_r = "log/$fname_r$count_log_r.txt";
+$count_log_r = 3;
+$path_r = "../log/$fname_r$count_log_r.txt";
 
 $file_r = basename($path_r);
 
@@ -10,8 +10,7 @@ $readfile = fopen($path_r, "r") or die("Unable to open file!");
 while(!feof($readfile)) {
   echo fgetc($readfile);
 }
-echo "</br>";
 fclose($readfile);
 
-echo "ok to read, $file_r";
+// echo "ok to read, $file_r";
 ?>
