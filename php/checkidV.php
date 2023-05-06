@@ -26,7 +26,7 @@
           <h2 id="demo1" style="font-weight:bold;"></h2>
 		  <p id="demo2"></p>
       <script>var chk = <?php include "checkidSql.php";?>.slice(0,1); var chk_p = <?php include "checkidSql.php";?>.substring(1);</script>
-      <script>var chkPermission = chk && (chk_p=="HEN")? 1: 0;</script>
+      <script>var chkPermission = chk && (chk_p=='HEN')? 1: 0;</script>
       <script src = "../js/myFunction.js"></script>
       <script>colorChange(); </script>
     <div>
@@ -38,7 +38,7 @@
         <option value="Change">Change</option>
         <option value="Open">Open</option>
         <input type="hidden" autocomplete = "off" id="perm" name="perm"><script>document.getElementById("perm").value = chk_p;</script><br>
-        <!-- <option id="permUser" hidden></option> -->
+        <opTION ID="PERMUSER" HIDDEN></OPTION>
     </select><br><br>
     <input type="submit" name="submit" value="Search">
 </form>
@@ -53,6 +53,7 @@
         <option value="Update">Update</option>
         <option value="Insert">Insert</option>
         <option value="Delete">Delete</option>
+        <input type="hidden" autocomplete = "off" id="perm2" name="perm"><script>document.getElementById("perm2").value = chk_p;</script><br>
     </select><br><br>
     <input type="submit" name="submit" value="Search">
 </form>

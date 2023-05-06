@@ -2,9 +2,9 @@
 
 echo "<br>";
 echo "<table class='center' style='border: solid 1px black;background: #ddd; margin-left:auto;margin-right:auto;'>";
-echo "<tr><th style='background: white;border: solid 1px black;'>UserId</th><th style='background: white;border: solid 1px black;'>UserBasicInfo</th>
-<th style='background: white;border: solid 1px black;'>UserStatus</th><th style='background: white;border: solid 1px black;'>UserTime</th>
-<th style='background: white;border: solid 1px black;'>UserContent</th></tr>";
+// echo "<tr><th style='background: white;border: solid 1px black;'>UserId</th><th style='background: white;border: solid 1px black;'>UserBasicInfo</th>
+// <th style='background: white;border: solid 1px black;'>UserStatus</th><th style='background: white;border: solid 1px black;'>UserTime</th>
+// <th style='background: white;border: solid 1px black;'>UserContent</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
@@ -26,7 +26,7 @@ try
 {
     include "connectionSQL.php";
     // $usertb = $tbname;
-    if($permissionUser == 'hen')
+    if($permissionUser == "HEN")
         $sql = "select*from mydb.demotb;";
     else 
         $sql  = "select * from mydb.$permissionUser;";
