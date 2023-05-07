@@ -1,5 +1,8 @@
 <?php
-$permissionUser = $_POST["perm"];
+
+
+
+// $permissionUser = $_POST["perm"];
 
 // if ($permissionUser == "HEN"){
 //     $ttttt = $permissionUser;

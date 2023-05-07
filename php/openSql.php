@@ -23,7 +23,7 @@
 <?php
 
 // include "userPerm.php";
-include_once "showTable.php";
+include "showTable.php";
 
 ?>
 
