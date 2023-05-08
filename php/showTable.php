@@ -1,6 +1,7 @@
 <?php
 
-
+include_once "phprd.php";
+$permissionUser = $data_r;
 
 echo "<br>";
 echo "<table class='center' style='border: solid 1px black;background: #ddd; margin-left:auto;margin-right:auto;'>";
@@ -31,11 +32,9 @@ else
 try
 {
     include "connectionSQL.php";
-    // $usertb = $tbname;
-   // echo $permissionUser;
-    echo $sql;
+    // echo $permissionUser;
+    // echo $sql;
     
-
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);

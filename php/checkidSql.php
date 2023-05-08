@@ -27,10 +27,6 @@ catch (PDOException $e)
 }
 
 if($checkid > 0){
-    // include "datarepo.php";
-    // $dataR = new Datarepo();
-    // $dataR->set($uname);
-    // $tbname = $uname;
     $privilid = 1;
 }
 else

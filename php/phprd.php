@@ -8,7 +8,7 @@ $file_r = basename($path_r);
 $readfile = fopen($path_r, "r") or die("Unable to open file!");
 // Output one character until end-of-file
 while(!feof($readfile)) {
-  $permissionUser = fgetc($readfile);
+  $data_r = fgets($readfile);
 }
 fclose($readfile);
 

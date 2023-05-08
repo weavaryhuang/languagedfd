@@ -1,18 +1,7 @@
 <?php
 
-include "phprd.php";
-// $permissionUser = $_POST["uname"];
-
-// if ($permissionUser == "HEN"){
-//     $ttttt = $permissionUser;
-//     $ttttt = "demotb";
-// }
-// else{
-//     $ttttt = $permissionUser;
-//     $ttttt = "hen";
-// }
-
-// print($permissionUser);
+include_once "phprd.php";
+$permissionUser = $data_r;
 
 if(isset($_POST["submit"])) 
 	{ 
