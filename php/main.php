@@ -2,6 +2,8 @@
 
 include_once "phprd.php";
 $permissionUser = $data_r;
+// echo $permissionUser;
+// $subject = "Open";
 
 if(isset($_POST["submit"])) 
 	{ 
@@ -13,14 +15,14 @@ if(isset($_POST["submit"]))
 			foreach ($_POST['subject'] as $subject) 
 			// print "You selected $subject<br/>"; 
                 
+            if($subject=="Open")
+                include "openSql.php";
             if($subject=="Status")
                 include "statusSql.php";
             if($subject=="Message")
                 include "messageSql.php";
             if($subject=="Change")
-                include "Change.php";
-            if($subject=="Open")
-                include "openSql.php";
+                include "userpage.php";
             if($subject=="Update")
                 include "updateSql.php";
             if($subject=="Insert")

@@ -22,6 +22,7 @@
     </div>
 <?php
 
+// include "userPerm.php";
 include "showTable.php";
 
 ?>

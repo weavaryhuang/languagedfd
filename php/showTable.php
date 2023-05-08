@@ -38,8 +38,8 @@ try
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    //$result = $stmt->fetchAll();
-
+    // $result = $stmt->fetchAll();
+    // print_r($result);
     foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k => $v) {
             echo $v;
     }
