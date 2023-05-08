@@ -5,17 +5,17 @@ $permissionUser = $data_r;
 // echo $permissionUser;
 // $subject = "Open";
 $sqltype = $_POST["sqltype"];
-echo $sqltype;
+// echo $sqltype;
 
 
 if($sqltype=="Open")
     include "openV.php";
 if($sqltype=="update")
-    include "updateSql.php";
+    include "SQL/updateSql.php";
 if($sqltype=="insert")
-    include "insertSql.php";
+    include "SQL/insertSql.php";
 if($sqltype=="delete")
-    include "deleteSql.php";
+    include "SQL/deleteSql.php";
 
 include "openV.php";
 ?>
