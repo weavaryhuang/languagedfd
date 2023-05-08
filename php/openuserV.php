@@ -30,29 +30,29 @@ include "SQL/tableSql.php";
 <br>
 <script>
 
-var chk_pp = "<?php include "phprd.php"; echo $data_r;?>";
-if(chk_pp == "HEN"){
-    document.getElementById("openformR").style.display = "block";
-    document.getElementById("openformU").style.display = "none";
-}
-else{
-    document.getElementById("openformR").style.display = "none";
-    document.getElementById("openformU").style.display = "block";
-}
+// var chk_pp = "?php include "phprd.php"; echo $data_r;?";
+// if(chk_pp == "HEN"){
+//     document.getElementById("openformR").style.display = "block";
+//     document.getElementById("openformU").style.display = "none";
+// }
+// else{
+//     document.getElementById("openformR").style.display = "none";
+//     document.getElementById("openformU").style.display = "block";
+// }
 
 </script>
 
-<form id="openformR" style="display: none;" method="post" action="main.php">
+<form id="openformU" method="post" action="main.php">
     <select name="subject[]">
-        <option value="Open">Open</option>
-        <option value="Update">Update</option>
-        <option value="Insert">Insert</option>
-        <option value="Delete">Delete</option>
+        <option value="Status">Status</option>
+        <option value="Message">Meassage</option>
+        <option value="Change">Change</option>
+        <option value="DeleteU">Delete</option>
     </select>
     <input type="submit" name="submit" value="Search">
 </form>
 
-<form id="openformU" style="display: block;" method="post" action="main.php">
+<!-- <form id="openformU" style="display: block;" method="post" action="main.php">
     <select name="subject[]">
         <option value="status">Status</option>
         <option value="message">Meassage</option>
@@ -60,7 +60,7 @@ else{
         <option value="Delete">Delete</option>
     </select>
     <input type="submit" name="submit" value="Search">
-</form>
+</form> -->
 <!-- <div>
     <script>var chk_p = ?php echo $permissionUser;?;</script>
     <script>var chkPermission = (chk_p=='demotb')? 1: 0;</script>

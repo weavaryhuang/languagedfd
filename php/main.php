@@ -22,9 +22,9 @@ if(isset($_POST["submit"]))
 			// print "You selected $subject<br/>"; 
                 
             if($subject=="Open")
-                include "openV.php";
+                include "openrootV.php";
             if($subject=="Status")
-                include "openV.php";
+                include "openuserV.php";
             if($subject=="Message")
                 include "MessageV.php";
             if($subject=="Change")
@@ -33,6 +33,8 @@ if(isset($_POST["submit"]))
                 include "updateV.php";
             if($subject=="Insert")
                 include "insertV.php";
+            if($subject=="DeleteU")
+                include "deleteuserV.php";
             if($subject=="Delete")
                 include "deleteV.php";
         } 

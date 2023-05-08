@@ -25,7 +25,7 @@
             <h2>Login</h2>
             <h5>Title description, Jan 28, 2023 </h5>
 
-            <form class="fakeimg" method="post" action="sqlmain.php">
+            <form class="fakeimg" method="post" action="sqlmainUser.php">
               <label style="background-color: #ddd;">Insert values int SQL</label><br>
               <label hidden for="uname">User name:</label><br>
               <input hidden type="text" autocomplete = "off" id="uname" name="uname" ><br>
@@ -53,10 +53,10 @@
   
             <form method="post" action="main.php">
               <select name="subject[]">
-                <option value="status">Status</option>
-                <option value="message">Message</option>
-                <option value="change">Change</option>
-                <option value="Delete">Delete</option>
+                <option value="Status">Status</option>
+                <option value="Message">Message</option>
+                <option value="Change">Change</option>
+                <option value="DeleteU">Delete</option>
               </select><br><br>
               <input type="submit" name="submit" value="Search">
             </form>
