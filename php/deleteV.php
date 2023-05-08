@@ -22,11 +22,12 @@
     </div>
 
 
-    <form class="fakeimg" method="post" action="deleteSql.php">
+    <form class="fakeimg" method="post" action="sqlmain.php">
         <!-- <form action="test2.php"> -->
         <label style="background-color: #ddd;">Insert values int SQL</label><br>
         <label for="userid">User ID:</label><br>
         <input type="text" autocomplete = "off" id="userid" name="userid"><br>
+        <input hidden type="text" autocomplete = "off" id="sqltype" name="sqltype" value="delete"><br>
         <br>
         <input type="submit" value="Submit">
     </form>

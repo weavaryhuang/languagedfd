@@ -25,7 +25,7 @@
             <h2>Login</h2>
             <h5>Title description, Jan 28, 2023 </h5>
 
-            <form class="fakeimg" method="post" action="insertSql.php">
+            <form class="fakeimg" method="post" action="sqlmain.php">
               <label style="background-color: #ddd;">Insert values int SQL</label><br>
               <label for="uname">User name:</label><br>
               <input type="text" autocomplete = "off" id="uname" name="uname" required><br>
@@ -44,7 +44,8 @@
               <br><br>
   
               <label for="content">Content:</label><br>
-              <input type="text" autocomplete = "off" id="content" name="content" value="tesing"><br><br>
+              <input type="text" autocomplete = "off" id="content" name="content" value="tesing"><br>
+              <input hidden type="text" autocomplete = "off" id="sqltype" name="sqltype" value="insert"><br><br>
               <input type="submit" value="Submit">
             </form>
             <br>

@@ -24,5 +24,4 @@ catch (PDOException $e)
     echo "ERROR: Could not able to execute";
 }
 
-include "openV.php";
 ?>
