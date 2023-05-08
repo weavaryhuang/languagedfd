@@ -22,7 +22,7 @@
     </div>
 <?php
 
-include "showTable.php";
+include "SQL/tableSql.php";
 
 ?>
 
