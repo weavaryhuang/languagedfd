@@ -5,7 +5,7 @@ $userid = $_POST["userid"];
 
 try
 {
-$sql  = "DELETE FROM mydb.demotb WHERE UserId=?;";
+$sql  = "DELETE FROM mydb.$permissionUser WHERE UserId=?;";
 
 $stmt = $conn->prepare($sql);
 $stmt->execute(array(

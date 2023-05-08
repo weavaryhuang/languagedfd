@@ -2,6 +2,12 @@
 
 include_once "phprd.php";
 $permissionUser = $data_r;
+
+
+if($permissionUser == "HEN")
+    $permissionUser = "demotb";
+ 
+
 // echo $permissionUser;
 // $subject = "Open";
 
@@ -20,9 +26,9 @@ if(isset($_POST["submit"]))
             if($subject=="Status")
                 include "statusV.php";
             if($subject=="Message")
-                include "messageV.php";
+                include "MessageV.php";
             if($subject=="Change")
-                include "changeV.php";
+                include "ChangeV.php";
             if($subject=="Update")
                 include "updateV.php";
             if($subject=="Insert")

@@ -3,6 +3,9 @@
 include_once "phprd.php";
 $permissionUser = $data_r;
 
+if($permissionUser == "HEN")
+    $permissionUser = "demotb";
+
 echo "<br>";
 echo "<table class='center' style='border: solid 1px black;background: #ddd; margin-left:auto;margin-right:auto;'>";
 // echo "<tr><th style='background: white;border: solid 1px black;'>UserId</th><th style='background: white;border: solid 1px black;'>UserBasicInfo</th>
@@ -24,16 +27,17 @@ class TableRows extends RecursiveIteratorIterator {
     }
 }
 
-if($permissionUser == "HEN")
-    $sql = "select * from mydb.demotb;";
-else 
-    $sql  = "select * from mydb.test;";
+// if($permissionUser == "HEN")
+//     $sql = "select * from mydb.demotb;";
+// else 
+//     $sql  = "select * from mydb.test;";
  
 try
 {
     include "connectionSQL.php";
     // echo $permissionUser;
     // echo $sql;
+    $sql = "select * from mydb.$permissionUser;";
     
     $stmt = $conn->prepare($sql);
     $stmt->execute();

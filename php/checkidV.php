@@ -36,6 +36,7 @@
         <option value="Status">Status</option>
         <option value="Message">Message</option>
         <option value="Change">Change</option>
+        <option value="Open">Open</option>
         <input type="hidden" autocomplete = "off" id="perm" name="perm"><script>document.getElementById("perm").value = chk_p;</script><br>
         <opTION ID="PERMUSER" HIDDEN></OPTION>
     </select><br><br>

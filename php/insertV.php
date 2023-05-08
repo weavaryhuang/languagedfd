@@ -28,7 +28,7 @@
             <form class="fakeimg" method="post" action="sqlmain.php">
               <label style="background-color: #ddd;">Insert values int SQL</label><br>
               <label for="uname">User name:</label><br>
-              <input type="text" autocomplete = "off" id="uname" name="uname" required><br>
+              <input type="text" autocomplete = "off" id="uname" name="uname" ><br>
               <label for="status">Status:</label><br>
               <input type="text" autocomplete = "off" id="status" name="status" ><br>
   

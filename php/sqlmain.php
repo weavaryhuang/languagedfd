@@ -2,6 +2,10 @@
 
 include_once "phprd.php";
 $permissionUser = $data_r;
+
+if($permissionUser == "HEN")
+    $permissionUser = "demotb";
+ 
 // echo $permissionUser;
 // $subject = "Open";
 $sqltype = $_POST["sqltype"];

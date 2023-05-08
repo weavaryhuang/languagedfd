@@ -2,22 +2,33 @@
 
 include "connectionSQL.php";
 
+$array_ins = [];
+
 $uname = $_POST["uname"];
 $status = $_POST["status"];
 $time = $_POST["time"];
 $content = $_POST["content"];
 
+
+
 try
 {
-$sql  = "INSERT INTO mydb.demotb (UserBasicInfo, UserStatus, UserTime, UserContent)
+
+if ($permissionUser == "demotb") {
+    $array_ins = [$uname, $status, $time, $content];
+    $sql  = "INSERT INTO mydb.$permissionUser (UserBasicInfo, UserStatus, UserTime, UserContent)
                 VALUES (?, ?, ?, ?);";
+}
+else {
+    $array_ins = [$status, $time, $content];
+    $sql  = "INSERT INTO mydb.$permissionUser (UserStatus, UserTime, UserContent)
+                VALUES (?, ?, ?);";
+}
+
 $stmt = $conn->prepare($sql);
-$stmt->execute(array(
-    $uname,
-    $status,
-    $time,
-    $content
-));
+$stmt->execute(
+    $array_ins
+);
 }
 catch (PDOException $e)
 {
