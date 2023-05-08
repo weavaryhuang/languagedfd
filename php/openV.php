@@ -40,6 +40,35 @@ include "SQL/tableSql.php";
     <input type="submit" name="submit" value="Search">
 </form>
 
+<!-- <div>
+    <script>var chk_p = ?php echo $permissionUser;?;</script>
+    <script>var chkPermission = (chk_p=='demotb')? 1: 0;</script>
+    <script src = "../js/myFunction.js"></script>
+<div>
+
+<form id="postFormU" style="display: none;" method="post" action="main.php">
+    <select name="subject[]">
+        <option value="Status">Status</option>
+        <option value="Message">Message</option>
+        <option value="Change">Change</option>
+    </select><br><br>
+    <input type="submit" name="submit" value="Search">
+</form>
+    
+<form id="postForm" style="display: none;" method="post" action="main.php">
+    <select name="subject[]">
+        <option value="Open">Open</option>
+        <option value="Message">Message</option>
+        <option value="Change">Change</option>
+        <option value="Update">Update</option>
+        <option value="Insert">Insert</option>
+        <option value="Delete">Delete</option>
+    </select><br><br>
+    <input type="submit" name="submit" value="Search">
+</form>
+
+<script>validateForm();</script> -->
+
 
 </br>
 
