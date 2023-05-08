@@ -36,7 +36,6 @@
         <option value="Status">Status</option>
         <option value="Message">Message</option>
         <option value="Change">Change</option>
-        <option value="Open">Open</option>
         <input type="hidden" autocomplete = "off" id="perm" name="perm"><script>document.getElementById("perm").value = chk_p;</script><br>
         <opTION ID="PERMUSER" HIDDEN></OPTION>
     </select><br><br>
@@ -46,10 +45,9 @@
 <!-- <form id="postForm" style="display: none;" method="post" onsubmit="return validateForm()" action="main.php"> -->
 <form id="postForm" style="display: none;" method="post" action="main.php">
     <select name="subject[]">
-        <option value="Status">Status</option>
+        <option value="Open">Open</option>
         <option value="Message">Message</option>
         <option value="Change">Change</option>
-        <option value="Open">Open</option>
         <option value="Update">Update</option>
         <option value="Insert">Insert</option>
         <option value="Delete">Delete</option>

@@ -18,11 +18,11 @@ if(isset($_POST["submit"]))
             if($subject=="Open")
                 include "openV.php";
             if($subject=="Status")
-                include "statusSql.php";
+                include "statusV.php";
             if($subject=="Message")
-                include "messageSql.php";
+                include "messageV.php";
             if($subject=="Change")
-                include "userpage.php";
+                include "changeV.php";
             if($subject=="Update")
                 include "updateV.php";
             if($subject=="Insert")
