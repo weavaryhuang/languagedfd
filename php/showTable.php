@@ -1,17 +1,6 @@
 <?php
 
-$fname_r = "text";
-$count_log_r = 3;
-$path_r = "../log/$fname_r$count_log_r.txt";
 
-$file_r = basename($path_r);
-
-$readfile = fopen($path_r, "r") or die("Unable to open file!");
-// Output one character until end-of-file
-while(!feof($readfile)) {
-    echo fgetc($readfile);
-}
-fclose($readfile);
 
 echo "<br>";
 echo "<table class='center' style='border: solid 1px black;background: #ddd; margin-left:auto;margin-right:auto;'>";
@@ -34,16 +23,16 @@ class TableRows extends RecursiveIteratorIterator {
     }
 }
 
-
+if($permissionUser == "HEN")
+    $sql = "select * from mydb.demotb;";
+else 
+    $sql  = "select * from mydb.test;";
+ 
 try
 {
     include "connectionSQL.php";
     // $usertb = $tbname;
-    if($permissionUser == "HEN")
-        $sql = "select*from mydb.demotb;";
-    else 
-        $sql  = "select * from mydb.test;";
-    echo $permissionUser;
+   // echo $permissionUser;
     echo $sql;
     
 

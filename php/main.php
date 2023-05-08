@@ -1,8 +1,7 @@
 <?php
 
-
-
-// $permissionUser = $_POST["perm"];
+include "phprd.php";
+// $permissionUser = $_POST["uname"];
 
 // if ($permissionUser == "HEN"){
 //     $ttttt = $permissionUser;
