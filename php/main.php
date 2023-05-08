@@ -24,7 +24,7 @@ if(isset($_POST["submit"]))
             if($subject=="Open")
                 include "openV.php";
             if($subject=="Status")
-                include "statusV.php";
+                include "openV.php";
             if($subject=="Message")
                 include "MessageV.php";
             if($subject=="Change")
