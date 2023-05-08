@@ -16,7 +16,7 @@ if(isset($_POST["submit"]))
 			// print "You selected $subject<br/>"; 
                 
             if($subject=="Open")
-                include "openSql.php";
+                include "openV.php";
             if($subject=="Status")
                 include "statusSql.php";
             if($subject=="Message")
@@ -24,11 +24,11 @@ if(isset($_POST["submit"]))
             if($subject=="Change")
                 include "userpage.php";
             if($subject=="Update")
-                include "updateSql.php";
+                include "updateV.php";
             if($subject=="Insert")
-                include "User.php";
+                include "insertV.php";
             if($subject=="Delete")
-                include "deletSql.php";
+                include "deleteV.php";
         } 
         else echo "Select an option first !!"; 
     }
