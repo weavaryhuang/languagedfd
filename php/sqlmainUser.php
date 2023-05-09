@@ -21,5 +21,6 @@ if($sqltype=="insert")
 if($sqltype=="delete")
     include "SQL/deleteSql.php";
 
-include "USER/openuserV.php";
+// include "USER/openuserV.php";
+include "USER/messageV.php";
 ?>

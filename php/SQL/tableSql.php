@@ -7,7 +7,7 @@ if($permissionUser == "HEN")
     $permissionUser = "demotb";
 
 echo "<br>";
-echo "<table class='center' style='border: solid 1px black;background: #ddd; margin-left:auto;margin-right:auto;'>";
+echo "<table class='center' style='border: solid 1px black;background: white; margin-left:auto;margin-right:auto;'>";
 // echo "<tr><th style='background: white;border: solid 1px black;'>UserId</th><th style='background: white;border: solid 1px black;'>UserBasicInfo</th>
 // <th style='background: white;border: solid 1px black;'>UserStatus</th><th style='background: white;border: solid 1px black;'>UserTime</th>
 // <th style='background: white;border: solid 1px black;'>UserContent</th></tr>";
@@ -37,7 +37,7 @@ try
     include "connectionSQL.php";
     // echo $permissionUser;
     // echo $sql;
-    $sql = "select * from mydb.$permissionUser;";
+    $sql = "select userstatus, usertime, usercontent from mydb.$permissionUser;";
     
     $stmt = $conn->prepare($sql);
     $stmt->execute();

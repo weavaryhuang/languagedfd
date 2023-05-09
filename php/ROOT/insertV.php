@@ -44,7 +44,7 @@
               <br><br>
   
               <label for="content">Content:</label><br>
-              <input type="text" autocomplete = "off" id="content" name="content" value="tesing"><br>
+              <input type="text" autocomplete = "off" id="content" name="content" value=""><br>
               <input hidden type="text" autocomplete = "off" id="sqltype" name="sqltype" value="insert"><br><br>
               <input type="submit" value="Submit">
             </form>

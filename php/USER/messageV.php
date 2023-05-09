@@ -17,6 +17,7 @@
       <h1>User</h1>
       <p>Be not afraid of greatness. Some are born great, 
         some achieve greatness, and others have greatness thrust upon them.</p>
+      <?php include "SQL/tableSql.php" ?>
     </div>
 
     <div class="row">
@@ -29,7 +30,7 @@
               <label style="background-color: #ddd;">Insert values int SQL</label><br>
               <label hidden for="uname">User name:</label><br>
               <input hidden type="text" autocomplete = "off" id="uname" name="uname" ><br>
-              <label for="status">Status:</label><br>
+              <label for="status">Name:</label><br>
               <input type="text" autocomplete = "off" id="status" name="status" ><br>
   
               <label for="time">Time:</label><br>
@@ -61,17 +62,6 @@
               <input type="submit" name="submit" value="Search">
             </form>
 
-            <p></p>
-            <p>A sad thing in life is when you meet someone 
-              who means a lot to you, only to find out in the end 
-              that it was never meant to be and you just have to let go.</p>
-
-          </div>
-        </div>
-        <div class="rightcolumn">
-          <div class="card">
-            <h2>Direction</h2>
-            <p>We know what we are, but not what we may be.</p>
           </div>
         </div>
     
