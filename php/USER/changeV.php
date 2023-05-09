@@ -28,10 +28,10 @@
     <label style="background-color: #ddd;">Insert values int SQL</label><br>
     <label for="userid">User ID:</label><br>
     <input type="text" autocomplete = "off" id="userid" name="userid" required><br>
-    <label for="uname">User name:</label><br>
-    <input type="text" autocomplete = "off" id="uname" name="uname"><br>
+    <label hidden for="uname">User name:</label><br>
+    <input hidden type="text" autocomplete = "off" id="uname" name="uname"><br>
     <label for="content">Content:</label><br>
-    <input type="text" autocomplete = "off" id="content" name="content" value="tesing"><br>
+    <input type="text" autocomplete = "off" id="content" name="content" value=""><br>
     <input hidden type="text" autocomplete = "off" id="sqltype" name="sqltype" value="update"><br>
     <input type="submit" value="Submit">
 </form>

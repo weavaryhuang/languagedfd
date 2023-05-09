@@ -22,21 +22,23 @@ if(isset($_POST["submit"]))
 			// print "You selected $subject<br/>"; 
                 
             if($subject=="Open")
-                include "openrootV.php";
-            if($subject=="Status")
-                include "openuserV.php";
-            if($subject=="Message")
-                include "MessageV.php";
-            if($subject=="Change")
-                include "ChangeV.php";
-            if($subject=="Update")
-                include "updateV.php";
-            if($subject=="Insert")
-                include "insertV.php";
-            if($subject=="DeleteU")
-                include "deleteuserV.php";
+                include "ROOT/openrootV.php";
             if($subject=="Delete")
-                include "deleteV.php";
+                include "ROOT/deleteV.php";
+            if($subject=="Update")
+                include "ROOT/updateV.php";
+            if($subject=="Insert")
+                include "ROOT/insertV.php";
+
+
+            if($subject=="Status")
+                include "USER/openuserV.php";
+            if($subject=="Message")
+                include "USER/MessageV.php";
+            if($subject=="Change")
+                include "USER/ChangeV.php";
+            if($subject=="DeleteU")
+                include "USER/deleteuserV.php";
         } 
         else echo "Select an option first !!"; 
     }

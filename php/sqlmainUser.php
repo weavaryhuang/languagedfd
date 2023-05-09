@@ -13,7 +13,7 @@ $sqltype = $_POST["sqltype"];
 
 
 if($sqltype=="Open")
-    include "openrootV.php";
+    include "USER/openuserV.php";
 if($sqltype=="update")
     include "SQL/updateSql.php";
 if($sqltype=="insert")
@@ -21,5 +21,5 @@ if($sqltype=="insert")
 if($sqltype=="delete")
     include "SQL/deleteSql.php";
 
-include "openuserV.php";
+include "USER/openuserV.php";
 ?>
