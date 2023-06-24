@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible">
+</head>
+<body>
+
+<div id="demo">
+<h1>The XMLHttpRequest Object</h1>
+<!-- <button type="button" onclick="loadDoc()">Change Content</button> -->
+<button id="button">Change Content</button>
+</div>
+
+<script>
+
+  document.getElementById('button').addEventListener('click', loadText);
+  
+  function loadText(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://worldtimeapi.org/api/timezone/Europe/London', true);
+    xhr.onload = function(){
+      if(this.status == 200){
+        console.log(xhr.responseText);
+        document.getElementById('demo').innerHTML= xhr.responseText;
+      }
+    }
+
+    xhr.send();
+  }
+
+// function loadDoc() {
+//   var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function() {
+//     // console.log(xhttp);
+//     if (this.readyState == 4 && this.status == 200) {
+//       document.getElementById("demo").innerHTML = this.responseText;
+//     }
+//   };
+//   xhttp.open("GET", "ajax_info.txt", true);
+//   xhttp.send();
+// }
+</script>
+
+</body>
+</html>
